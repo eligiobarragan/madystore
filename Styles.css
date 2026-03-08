@@ -1,7 +1,7 @@
 body {
     font-family:"Poppins", sans-serif;
     margin: 0;
-    background-color: #ffe5ec;
+    background-color: #ffe6f0;
 }
 h1 {
     background-color: #ffb6c1;
@@ -41,16 +41,12 @@ nav a:hover {
     width: 250px;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
     transition: 0.3s;
-    opacity: 0;
-    animation: aparecer 1s forwards;
 }
 .producto:hover {
     transform: translateY(-5px);
 }
 .producto img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
     border-radius: 10px;
 }
 .nosotros {
@@ -76,20 +72,18 @@ form {
 input, textarea {
 padding: 10px;
 border-radius: 5px;
-border: 1px solid #ccc;
+border: 1px solid #ccc
 }
 button {
-    background: linear-gradient(45deg,#ff8fab,#ff5d8f);
+    background-color: #ffb6c1;
     border: none;
     padding: 10px;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
 }
 button:hover {
-    transform: scale(1.05);
+    background-color: #ff8fab;
 }
 footer {
     background-color: #333;
@@ -143,6 +137,10 @@ html {
 }
 .hero p {
     font-size: 20px;
+}
+.producto {
+    opacity: 0;
+    animation: aparecer 1s forwards;
 }
 @keyframes aparecer {
     from {
@@ -232,38 +230,22 @@ header {
     background: white;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
 }
-.modalpago {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-.pago-contenido{
+.pago-modal{
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    text-align: center;
-    width: 300px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    margin-top: 10px;
 }
 .metodos {
     display: flex;
-    flex-direction: column;
     gap: 10px;
-    margin: 20px 0;
+    margin-bottom: 10px;
 }
 .metodos button {
-    background: #ff8fab;
-    gap: 10px;
-    margin: 20px;
-}
-.cancelar {
-    background: #333;
-    color: white;
+    flex: 1;
+    background: #eee;
+    color: black;
 }
 #login {
     position: fixed;
