@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>MADYSTORE</title>
+
+<link rel="stylesheet" href="Styles.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div id="login">
+    <div class="login-box">
+        <h2>Cuenta</h2>
+        <input type="text" id="usuario" placeholder="usuario">
+        <input type="password" id="password" placeholder="contraseña">
+        <button onclick="registrar()">Registrarse</button>
+        <button onclick="login()">Entrar</button>
+    </div>
+</div>
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/8994992406" class="whatsapp" target="_blank">
+W
+</a>
+
+<header>
+
+<h1>MADYSTORE</h1>
+
+<nav>
+<a href="#inicio">inicio</a>
+<a href="#productos">productos</a>
+<a href="#nosotros">nosotros</a>
+<a href="#contacto">contacto</a>
+</nav>
+
+<!-- ICONO CARRITO -->
+
+<div class="carrito-icono" onclick="togglecarrito()">
+🛒 carrito (<span id="contador-carrito">0</span>)
+</div>
+
+<!-- PANEL CARRITO -->
+
+<div id="carrito-panel" class="carrito-panel">
+
+<h3>Tu carrito</h3>
+
+<ul id="lista-carrito"></ul>
+
+<p>Total: $<span id="total">0</span> MXN</p>
+
+<button onclick="vaciarcarrito()">Vaciar carrito</button>
+
+<button onclick="abrirPago()">Pagar</button>
+
+</div>
+
+<!-- PANEL METODOS DE PAGO -->
+
+<div id="modalpago" style="display:none">
+
+<h2>Selecciona método de pago</h2>
+
+<button onclick="procesarPago('Tarjeta 💳')">
+Pagar con Tarjeta
+</button>
+
+<button onclick="procesarPago('PayPal 🅿️')">
+Pagar con PayPal
+</button>
+
+<button onclick="procesarPago('Efectivo 💵')">
+Pagar en efectivo
+</button>
+
+<button onclick="cerrarpago()">
+Cancelar
+</button>
+
+</div>
+
+<div class="busqueda">
+
+<input type="text" id="buscar" placeholder="buscar productos..."
+onkeyup="buscarproducto()">
+
+</div>
+
+</header>
+
+<section id="inicio" class="hero">
+
+<h2>Moda que define tu estilo</h2>
+
+<p>Descubre nuestra nueva colección 2026</p>
+
+</section>
+
+<div class="categorias">
+
+<button onclick="filtrar('todos')">todos</button>
+<button onclick="filtrar('ropa')">ropa</button>
+<button onclick="filtrar('accesorio')">accesorio</button>
+<button onclick="filtrar('calzado')">calzado</button>
+
+</div>
+
+<section id="productos" class="productos">
+
+<h2>Nuestros Productos</h2>
+
+<div class="contenedor-productos">
+
+<div class="producto" data-categoria="ropa">
+
+<img src="https://i.pinimg.com/originals/50/ce/1d/50ce1d5a6a633e79c4ce1fdcb903aba5.jpg">
+
+<h3>Chamarra</h3>
+
+<p>$1500 MXN</p>
+
+<button onclick="agregarcarrito('Chamarra',1500,'imagenes/Chamarra.avif')">
+Agregar al carrito
+</button>
+
+</div>
+
+<div class="producto" data-categoria="accesorio">
+
+<img src="imagenes/Bolsa.jpg">
+
+<h3>Bolsa</h3>
+
+<p>$2000 MXN</p>
+
+<button onclick="agregarcarrito('Bolsa',2000,'imagenes/Bolsa.jpg')">
+Agregar al carrito
+</button>
+
+</div>
+
+<div class="producto" data-categoria="calzado">
+
+<img src="imagenes/Botas.jpg">
+
+<h3>Botas</h3>
+
+<p>$2260 MXN</p>
+
+<button onclick="agregarcarrito('Botas',2260,'imagenes/Botas.jpg')">
+Agregar al carrito
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="nosotros" class="nosotros">
+
+<h2>Sobre Nosotros</h2>
+
+<p>
+Somos una boutique dedicada a ofrecer moda moderna y elegante.
+Nuestro objetivo es brindar calidad, estilo y confianza a nuestros clientes.
+</p>
+
+</section>
+
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre" required>
+
+<input type="email" placeholder="Correo electronico" required>
+
+<textarea placeholder="Escribe tu mensaje"></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 MADYSTORE / Síguenos en redes sociales</p>
+
+</footer>
+
+<script src="Script.js"></script>
+
+</body>
+</html>
